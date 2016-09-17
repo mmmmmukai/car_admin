@@ -1,0 +1,44 @@
+.navbar.main {
+	&.navbar-default {
+        font-size:15px;
+		@navbarBg: #f0f0f0;
+		background: @navbarBg;
+		.badge { border: none; }
+
+        [class*="border-"],
+		li.notifications {
+            margin: 0 6px 0 !important;
+            > a {
+                > i {
+                    color: #c7c7c7;
+                    font-size: 20px;
+                    position: relative;
+                    top: 2px;
+                    margin-right: 3px;
+                }
+                .badge {
+                    position:relative;
+                    top:-8px;
+                    left:-8px;
+                    width: 17px;
+                    height: 17px;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 3px;}
+                &:hover,&.active, &.open {
+                    i {
+                        color: darken(#c7c7c7,10%);
+                    }
+                }
+            }
+		}
+		ul.main.pull-right > li { 
+			margin:0;
+			padding:0 10px;
+			border-left:1px solid #dbdbdb;}
+
+		.notifications > li {
+			a.notif-block.fa { color: #999; }
+		}
+	}
+}

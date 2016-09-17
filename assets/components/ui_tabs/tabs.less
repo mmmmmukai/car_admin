@@ -1,0 +1,576 @@
+//
+// Tabs
+// --------------------------------------------------
+
+.widget {
+    &.widget-tabs-content {
+      .widget-head {
+          background: @containerBg;
+          border:none;
+          padding: 0;
+
+          ul {
+            list-style: none;
+            display: inline-block;
+            height: auto;
+            width: 100%;
+            border-bottom:1px solid @contentBorder;
+            padding-top: 10px;
+            padding-left: 0px;
+            padding-right: 25px;
+            margin:0;
+
+            li {
+              height: auto;
+              display: inline-block;
+              position: relative;
+              top: 1px;
+              border:none;
+              border-radius: 0;
+              a {
+                padding:5px 10px;
+                display: block;
+                border-radius: 0;
+                text-shadow:none;
+                color: #999;
+                border-bottom-color: @contentBorder;
+                font-weight:bold;
+                &:hover {
+                  background:#efefef;
+                  color: #333333 ;
+                  border-color: @widgetBg;
+                  border-bottom-color:@primaryColor;
+                }
+                &.glyphicons {
+                  padding: 10px 10px 10px 35px;
+                  i:before { left: 10px; top: 10px; font-size: 18px; color:#797979; }
+                }
+              }
+              &.active {
+                background: none;
+                border:none;
+                a {
+                  background:@widgetBg;
+
+                  border-bottom-color: @widgetBg;
+                  box-shadow: none;
+                  color: @primaryColor;
+                  -moz-box-shadow: none;
+                  -webkit-box-shadow: none;
+                  &:hover {
+                    border-bottom-color:@widgetBg;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+    }
+	&.widget-tabs {
+		.widget-head {
+			border:none;
+			padding: 0;
+			ul {
+                   list-style: none;
+                   display: block;
+                   height: auto;
+                   width: 100%;
+                   border-bottom:1px solid @contentBorder;
+                   padding-top: 10px;
+                   padding-left: 25px;
+                   padding-right: 25px;
+                   li {
+                     height: auto;
+                     display: inline-block;
+                     position: relative;
+                     top: 1px;
+                     margin-left: -6px;
+                     border:none;
+                     border-radius: 0;
+                     a {
+                       padding:5px 10px;
+                       display: block;
+                       //						overflow: hidden;
+                       border-radius: 0;
+                       text-shadow:none;
+                       color: #999;
+                       border:1px solid @widgetBg;
+                       border-bottom-color: @contentBorder;
+                       font-weight:bold;
+                       &:hover {
+                         background:none;
+                         color: #333333 ;
+                         border-color: @widgetBg;
+                         border-bottom-color:@primaryColor;
+                       }
+                       &.glyphicons {
+                         padding: 10px 10px 10px 35px;
+                         i:before { left: 10px; top: 9px; font-size: 16px; color:#797979; }
+                       }
+                     }
+                     &.active {
+                       /*margin-bottom: -2px;*/
+                       background: none;
+                       border:none;
+                       a {
+                         background:@widgetBg;
+                         border:1px solid @contentBorder;
+                         border-bottom-color: @widgetBg;
+                         box-shadow: none;
+                         color: #333333;
+                         -moz-box-shadow: none;
+                         -webkit-box-shadow: none;
+                         &:hover {
+                           border-bottom-color:@widgetBg;
+                         }
+                       }
+                     }
+
+                   }
+                 }
+		}
+	}
+	&.widget-tabs-double {
+		> .widget-head {
+			ul {
+				li, li.active {
+					a {
+						span {padding: 0 5px;}
+						&.glyphicons {
+							padding: 10px 10px 10px 35px;
+							i:before { left: 10px; top: 9px; font-size: 20px; }
+						}
+					}
+				}
+			}
+		}
+	}
+	&.widget-tabs-double-2 {
+		border: none;
+		> .widget-head {
+			border-bottom: none;
+			&.border-bottom {
+				border-bottom: 1px solid @contentBorder;
+			}
+			ul {
+				li {
+					margin-left: -4px;
+					a {
+						.transition(color 1s ease);
+						padding: 10px;
+						display: block;
+						text-decoration: none;
+						text-align: center;
+                      padding-bottom: 4px;
+						span {
+							display: block;
+							line-height: 20px;
+						}
+						&.glyphicons {
+							padding: 10px 15px 0 15px; ;
+							i {
+								display: block;
+								text-align: center;
+							}
+							i:before { left: auto; top: auto; font-size: 20px; color: #cccccc; position: relative; .transition(color 1s ease); }
+						}
+					}
+					&.active { 
+						background: @widgetBg;
+						a { 
+							color: @primaryColor;
+							i:before { color: @primaryColor; } 
+						}
+					}
+					&:hover {
+						background: @widgetBg;
+						a {
+							color: @primaryColor;
+							i:before { color: @primaryColor; } 
+						}
+					}
+				}
+			}
+		}
+		> .widget-body {
+			.tab-pane {
+				border:none;
+			}
+		}
+		.widget-body-regular {
+			padding: 10px;
+			border: 1px solid @contentBorder;
+			p:last-child { margin: 0; }
+		}
+	}
+	&.widget-tabs-vertical {
+		.widget-head {
+			border: none;
+			height: auto;
+			padding: 0;
+			ul {
+				display: block;
+				height: auto;
+				padding: 0;
+				border:none; 
+				li {
+					float: none;
+					display: block;
+					margin-left: 0;
+					top: 0;
+					a {
+						line-height: 1;
+						span {display: block; }
+				    	&.glyphicons {
+						  i:before { top: 15px; color:#797979 !important;  }
+						}
+                        &:hover {
+                          border-color:@widgetBg;
+                          background:#ffffff;
+                        }
+					}
+					&.active {
+						a {
+							background-color: @primaryColor;
+                           color:#fff;
+//							border-bottom-color: @primaryColor;
+//							border-right-color: ;
+							&.glyphicons {
+								padding-right: 10px;
+								i:before { top: 15px; color:#fff !important; }
+
+							}
+
+
+						}		
+					}
+				}
+			}
+		}
+		.widget-body {
+			padding: 0;
+			.tab-content { padding: 12px 15px; }
+		}
+	}
+	&.widget-wizard-pills {
+		.widget-head {
+			ul {
+				padding-bottom: 10px;
+				li {
+					color: @bodyText;
+					border: none;
+					padding-right: 10px;
+					&:last-child { padding:0;}
+					&.status {
+						top: -15px;
+						padding: 0 15px  0 0;	
+						span.r {
+							display: block;
+							line-height: 15px;
+						}
+					}
+					a {
+						padding: 15px;
+						text-align: center;
+						background: @widgetBg;
+						border: 1px solid @contentBorder;
+						font-weight: 600;
+						font-size: 16pt;
+						.rounded(5px,5px,5px,5px);
+						position: relative;
+						z-index: 2;
+						&:hover {
+							background:@widgetBg;
+							color: @bodyText;
+							border-color: @primaryColor;
+						}
+					}
+					&.active {
+						background: none;
+						a {
+							background: lighten(@contentBorder, 10%);
+							border-color: @primaryColor; 
+							&:hover {
+								border-color: @bodyText; 
+							}
+						} 
+					}
+					&.primary {
+						a { 
+							background: @primaryColor;
+							border-color: @primaryColor;
+							color: #fff; 
+							&:hover {
+								color:@bodyText;
+							}
+						}
+					}
+					&:not(:first-of-type):before {
+						position: absolute;
+						background: @contentBorder;
+						height: 1px;
+						left: 0px;
+						right: 0px;
+						top: 32px;
+						display: block;
+						content: "";
+						z-index: 1;
+					}
+					/*&.no-padding { padding: 0; }*/
+				}
+			}
+		}
+	}
+	&.widget-tabs-2 {
+		border-bottom: 1px solid @contentBorder;
+		&.border-bottom-none { border-bottom: none; }
+		> .widget-head {
+			background: #fff;
+			border: none;
+			border-bottom: 1px solid @contentBorder;
+			padding: 0 10px;
+			ul {
+				border-color: @contentBorder;
+				li {
+					border: none;
+					&.active {
+						background-color: #f7f7f7;
+						background-image: -moz-linear-gradient(top,#f7f7f7,#ffffff);
+						background-image: -webkit-gradient(linear,0 0,0 100%,from(#f7f7f7),to(#ffffff));
+						background-image: -webkit-linear-gradient(top,#f7f7f7,#ffffff);
+						background-image: -o-linear-gradient(top,#f7f7f7,#ffffff);
+						background-image: linear-gradient(to bottom,#f7f7f7,#ffffff);
+						background-repeat: repeat-x;
+					}
+					a {
+						border: 1px solid #dddddd;
+						border-bottom: none;
+						border-right: none;
+						color: #222;
+						text-transform: uppercase;
+						font-weight: 600;
+					}
+					&:first-child a { .rounded(); }
+				}
+			}
+		}
+		> .widget-body { background: #fff; border: none; padding: 15px; }
+	}
+	&.tabs-right {
+		.widget-head {
+			ul { float: right; }
+		}
+	}
+	&.widget-tabs-icons-only-2 {
+		> .widget-head {
+			ul li {
+				a.glyphicons {
+					width: 38px;
+					padding: 0;
+					i {
+						width: 38px;
+						display: block;
+						line-height: 35px;
+						&:before { width: 38px; text-align: center; left: auto; top: auto; position: relative; display: block; line-height: 35px; color: #cbcbcb; }
+					}
+				}
+				&.active a.glyphicons i:before { color: #505050; }
+			}
+		}
+	}
+	&.widget-tabs-icons-only {
+		.widget-body { 
+			padding: 0;
+			p:last-child { margin: 0; } 
+		}
+		.widget-head {
+			.heading {
+				display: inline-block;
+				float: left;
+				padding:10px 0 0 0; 
+			}
+			ul {
+				display: block;
+				overflow: hidden;
+				position: relative;
+				list-style: none;
+				margin: 0;
+				height: 30px;
+				line-height: 30px;
+				padding: 0;
+				li {
+					color: @bodyText;
+					float: left;
+					display: block;
+					padding: 0 10px 0 0;
+					font-size: 8pt;
+					line-height: 30px;
+					&.glyphicons {
+						width: 36px;
+						height: 30px;
+						padding: 0 3px;
+						text-align: center;
+						cursor: pointer;
+						i {
+							background: #e5e5e5; 
+							.transition(background .5s ease);
+							display: block; 
+							.rounded(2px,2px,2px,2px); 
+							height: 30px; 
+							position: relative;
+							&:before { position: relative; top: 0; left: 0; color: #64625f; font-size: 17px; line-height: 30px; }
+						}
+						&:hover {
+							i { background: #dedede; }
+						}
+						&.active {
+							i {
+								background: #64625f;
+								&:before { color: #fff; } 
+							}
+						}
+						&:last-child { padding: 0; }
+					}
+				}
+			}
+		}
+	}
+}
+
+// Tabsbar
+// -------------------------
+
+.tabsbar {
+	height: 62px;
+	border: 1px solid @contentBorder;
+	position: relative;
+	overflow: hidden;
+	margin: 0 0 @spacing;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		height: 60px;
+		li {
+			float: left;
+			display: block;
+			height: 60px;
+			border-right: 1px solid @contentBorder;
+			background: @contentGradient1;
+			padding: 3px;
+			a {
+				display: block;
+				height: 54px;
+				line-height: 54px;
+				#gradient > .vertical(@contentGradient1, @contentGradient2);
+				padding: 0 15px;
+				color: @bodyText;
+				text-decoration: none;
+				.transition(background 1s ease);
+				i {
+					display: inline-block;
+					float: left;
+					width: 39px;
+					height: 54px;
+					&:before {
+						color: #797979;
+						position: relative;
+						top: auto;
+						left: auto;
+						line-height: 54px;
+						text-align: center;
+					}
+				}
+			}
+			&.active {
+				a {
+					#gradient > .vertical(lighten(@primaryColor, 15%), @primaryColor);
+					color: #fff;
+					i:before { color: #fff; }
+				}
+			}
+		}
+	}
+	&.tabsbar-2 {
+		height: 39px;
+		ul {
+			height: 39px;
+			li {
+				height: 39px;
+				padding: 0;
+				background: none;
+				border: none;
+				.transition(background .5s ease);
+				a {
+					height: 39px;
+					line-height: 39px;
+					background: none;
+					.transition(color .5s ease);
+					i {
+						height: 39px;
+						width: 33px;
+						&:before { line-height: 39px; font-size: 20px; .transition(color 1s ease); }
+					}
+				}
+				&.active {
+					background: #fff;
+					a {
+						color: @primaryColor;
+						i:before { color: @primaryColor; }
+					}
+				}
+				&:not(.active):hover {
+					a {
+						color: @primaryColor;
+						i:before { color: @primaryColor; }
+					} 
+				}
+			}
+		}
+		&.active-fill {
+			ul li.active a {
+				background: @primaryColor;
+				color: #fff;
+				i:before { color: #fff; }
+			}
+		}
+	}
+}
+
+// nav-tabs & nav-pills
+// -------------------------
+
+.nav-tabs > li > a:hover,
+.nav-pills > li > a,
+.nav-pills > li > a:hover {
+	background: @primaryColor;
+	border-bottom-color: @primaryColor;
+	color: #fff;
+}
+.nav-tabs { border-bottom-color: @primaryColor; }
+.nav-tabs > li > a {
+	padding: 6px 8px;
+}
+.nav-tabs > .active > a, .nav-tabs > .active > a:hover { 
+	background: @primaryColor;
+	border-top-color: @primaryColor; 
+	border-left-color: @primaryColor;
+	border-right-color: @primaryColor;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(0,0,0,.5);
+	.bevelEmboss();
+}
+.nav-pills a { cursor: pointer; }
+.nav-pills > .active > a, .nav-pills > .active > a:hover { 
+	background: @primaryColor;
+	color: #fff;
+}
+.nav-pills {
+	.glyphicons { 
+		padding-left: 25px;
+		i:before { position: relative; font-size: 14px; left: -10px; top: 2px; color: #F5EADB; font-weight: normal; text-shadow: none; }
+	}
+}
+.tab-content { overflow: visible; padding: 0; }

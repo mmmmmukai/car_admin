@@ -1,0 +1,296 @@
+
+//
+// Widgets
+// --------------------------------------------------
+
+.widget {
+	background: @widgetBg;
+	margin: 0 auto @layoutAppSeparator;
+	position: relative;
+
+    box-shadow: 0 1px 0 0 @inverseColor;
+    -moz-box-shadow: 0 1px 0 0 @inverseColor;
+    -webkit-box-shadow: 0 1px 0 0 @inverseColor;
+
+	.widget-head {
+		border-bottom: 1px solid @contentBorder;
+		position: relative;
+		padding: @spacing/2;
+		.pull-left { padding-top: 2px; }
+		&.progress { padding: 0; }
+		.heading { 
+			margin: 0; 
+			font-size: 14px;
+            font-weight:bold;
+			&.glyphicons {
+				width: auto;
+				display: block;
+				padding: 0 0 0 25px;
+				i:before {
+					padding: 0;
+					margin: 0;
+					left: 0;
+					top: 0;
+					text-align: left;
+					width: 25px;
+					color: @bodyText;
+					font-size: 16px;
+					font-weight: normal;
+					text-shadow: none;
+				}
+			} 
+		}
+		a { text-shadow: none; }
+	}
+	.widget-body {
+		padding: @spacing;
+
+		ul.list-hands {
+			list-style: none;
+			li {
+				padding: @spacing/2;
+				border-bottom: 1px solid @contentBorder;
+				&:last-of-type {border-bottom:none;}
+                .pull-right {
+                    width:30px;
+                    text-align: center;
+                    margin:5px 7px 0 0 !important;
+                    i:before {
+                        position: relative;
+                        font-size:2em !important;
+                        color:#a2a2a2;
+                    }
+                }
+			}
+			li:hover { .pull-right i:before { color:@primaryColor; } }
+		}
+
+	}
+    .margin-slim {
+      margin-bottom:2px !important;
+    };
+	&.row-merge { margin: 0 0 @layoutAppSeparator !important; }
+	&.icon-widget {
+        font-weight:600;
+        .text-large { font-size: 30px !important; }
+        .text-large + small { position: relative; top: -5px; }
+		.widget-body {
+			padding: 0;
+			margin:0;
+			min-height:120px;
+			.background-icon {
+				display: block;
+				position: absolute;
+				text-align: center;
+				width: 100%;
+				bottom: 10px;
+				left: 0;
+				i {
+					font-size: 5em;
+					&:before { vertical-align:bottom; }
+					&.icon-group:before {
+						top: .2em;
+						position: relative;
+					}
+				}
+			}
+		}
+	}
+    &.widget-none {
+      box-shadow: 0 0px 0 0;
+      -moz-box-shadow: 0 0px 0 0;
+      -webkit-box-shadow: 0 0px 0 0;
+    }
+	&.widget-primary {
+		box-shadow: 0 3px 0 0 @primaryColor;
+		-moz-box-shadow: 0 3px 0 0 @primaryColor;
+		-webkit-box-shadow: 0 3px 0 0 @primaryColor;
+		.background-icon { color: @primaryColor; }
+		&.widget-small {
+			box-shadow: 0 1px 0 0 @primaryColor;
+			-moz-box-shadow: 0 1px 0 0 @primaryColor;
+			-webkit-box-shadow: 0 1px 0 0 @primaryColor;
+		}
+	}
+	&.widget-success {
+		box-shadow: 0 3px 0 0 @successColor;
+		-moz-box-shadow: 0 3px 0 0 @successColor;
+		-webkit-box-shadow: 0 3px 0 0 @successColor;
+		.background-icon { color: @successColor; }
+		&.widget-small {
+			box-shadow: 0 1px 0 0 @successColor;
+			-moz-box-shadow: 0 1px 0 0 @successColor;
+			-webkit-box-shadow: 0 1px 0 0 @successColor;
+		}
+	}
+	&.widget-info {
+		box-shadow: 0 3px 0 0 @infoColor;
+		-moz-box-shadow: 0 3px 0 0 @infoColor;
+		-webkit-box-shadow: 0 3px 0 0 @infoColor;
+		.background-icon { color: @infoColor; }
+		&.widget-small {
+			box-shadow: 0 1px 0 0 @infoColor;
+			-moz-box-shadow: 0 1px 0 0 @infoColor;
+			-webkit-box-shadow: 0 1px 0 0 @infoColor;
+		}
+	}
+	&.widget-danger {
+		box-shadow: 0 3px 0 0 @dangerColor;
+		-moz-box-shadow: 0 3px 0 0 @dangerColor;
+		-webkit-box-shadow: 0 3px 0 0 @dangerColor;
+		.background-icon { color: @dangerColor; }
+		&.widget-small {
+			box-shadow: 0 1px 0 0 @dangerColor;
+			-moz-box-shadow: 0 1px 0 0 @dangerColor;
+			-webkit-box-shadow: 0 1px 0 0 @dangerColor;
+		}
+	}
+	&.widget-warning {
+		box-shadow: 0 3px 0 0 @warningColor;
+		-moz-box-shadow: 0 3px 0 0 @warningColor;
+		-webkit-box-shadow: 0 3px 0 0 @warningColor;
+		.background-icon { color: @warningColor; }
+		&.widget-small {
+			box-shadow: 0 1px 0 0 @warningColor;
+			-moz-box-shadow: 0 1px 0 0 @warningColor;
+			-webkit-box-shadow: 0 1px 0 0 @warningColor;
+		}
+	}
+	&.widget-inverse {
+		box-shadow: 0 3px 0 0 @inverseColor;
+		-moz-box-shadow: 0 3px 0 0 @inverseColor;
+		-webkit-box-shadow: 0 3px 0 0 @inverseColor;
+		.background-icon { color: @inverseColor; }
+		&.widget-small {
+			box-shadow: 0 1px 0 0 @inverseColor;
+			-moz-box-shadow: 0 1px 0 0 @inverseColor;
+			-webkit-box-shadow: 0 1px 0 0 @inverseColor;
+		}
+	}
+	.details { font-size: 8pt; color: @bodyText; }
+
+	&.widget-heading-simple {
+		> .widget-head {
+            border-bottom: 1px solid @contentBorder;
+            position: relative;
+            padding: @spacing/2;
+            .pull-left { padding-top: 2px; }
+            &.progress { padding: 0; }
+            .heading {
+              margin: 0;
+              font-size: 14px;
+              font-weight:bold;
+              &.glyphicons {
+                width: auto;
+                display: block;
+                padding: 0 0 0 25px;
+                i:before {
+                  padding: 0;
+                  margin: 0;
+                  left: 0;
+                  top: 0;
+                  text-align: left;
+                  width: 25px;
+                  color: @bodyText;
+                  font-size: 16px;
+                  font-weight: normal;
+                  text-shadow: none;
+                }
+              }
+            }
+            a { text-shadow: none; }
+		}
+		> .widget-body { background: @widgetBg; }
+	}
+	
+	&.widget-body-simple {
+		#reset .rounded();
+		box-shadow: none;
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		> .widget-body {
+			background: none;
+			border: none;
+			padding: 0;
+			#reset .rounded();
+		}
+	}
+	&.widget-body-white {
+		> .widget-body { background: #ffffff; }
+	}
+	&.widget-body-gray {
+		> .widget-body {  background: @widgetBgGray; }
+	}
+	&.widget-body-primary {
+		> .widget-body { 
+			background: @primaryColor; 
+			* { color: #fff; text-shadow: none; } 
+		}
+	}
+	&.widget-body-inverse {
+		> .widget-body {
+			background: @inverseColor;
+			*, i:before { color: #fff; text-shadow: none; }
+		}
+	}
+	&.widget-body-default {
+		> .widget-body {
+			background: @defaultColor;
+			*, i:before { color: #fff; text-shadow: none; }
+		}
+	}
+	&.widget-body-multiple {
+		#reset .boxShadow();
+		> .widget-body {
+			margin-bottom: @spacing/2;
+			&:last-of-type { margin-bottom: 0; }
+		}
+	}
+}
+
+// Icons within content
+// -------------------------
+
+div.glyphicons {
+	padding: 0 0 0 47px;
+	i:before { color: #e2e2e2; font-size: 32px; }
+	&.glyphicon-large {
+		padding: 0 0 0 75px;
+		i:before { font-size: 50px; left: 0; }
+		&.group-column {
+			padding: 0 0 0 85px;
+			i:before { font-size: 45px; left: 12px; }
+		}
+	}
+	&.glyphicon-xlarge {
+		padding: 0 0 0 85px;
+		i { padding: 0 0 10px; }
+		i:before { font-size: 70px; }
+	}
+	&.glyphicon-top {
+		padding: 0;
+		text-align: center;
+		i {
+			display: block;
+			position: relative;
+			padding: 5px 0 10px;
+			&:before {
+				position: relative;
+				left: auto;
+				top: auto;
+			}
+		}
+	}
+	&.glyphicon-primary {
+		i:before { color: @primaryColor; }
+	}
+	@media (max-width: 979px) and (min-width: 768px)
+	{
+		&.hidden-tablet-partial {
+			padding: 0;
+		}
+	}
+}
+.widget-body-primary {
+	div.glyphicons i:before { color: #fff; }
+}

@@ -1,0 +1,72 @@
+//
+// Pagination
+// --------------------------------------------------
+
+// Pagination
+// ------------------------- //
+
+.pagination {
+
+}
+.pagination > li.primary > a {
+	background: @primaryColor;
+	color: #fff;
+
+}
+.pagination>.active>a,
+.pagination>.active>span,
+.pagination>.active>a:hover,
+.pagination>.active>span:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:focus {
+	border-color: @contentBorder;
+	background: @primaryColor;
+	color: #fff;
+	font-weight: 700;
+}
+.pagination > li > a,
+.pagination > li > span {
+	border-color: @contentBorder;
+	background: #efefef;
+    color:@infoColor;
+    &:hover {
+      background: lighten(#efefef,3%);
+      color:@inverseColor
+    }
+}
+
+.pagination > .primary.disabled > a,
+.pagination > .disabled > a,
+.pagination > .disabled > span {
+	border-color: @contentBorder;
+	background: @widgetBg;
+	color: #dddddd;
+	font-weight: 700;
+	text-shadow: none;
+
+}
+.pagination > .disabled > a:hover {
+	border-color: @contentBorder;
+	background: @widgetBg;
+	color: #dddddd;
+	text-shadow: none;
+
+}
+.pagination {
+	text-align: left;
+	display: block;
+	li {margin-right: -4px;}
+	li a { float: none;}
+}
+.pagination-right {
+	text-align: right;
+	display: block;
+	li {margin-right: -4px;}
+	li a { float: none;}
+}
+.pagination-centered {
+	display: block;
+	text-align: center;
+	li {margin-right: -4px;}
+	li a { float: none;}
+}

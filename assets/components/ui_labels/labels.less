@@ -1,0 +1,156 @@
+//
+// Labels
+// --------------------------------------------------
+
+// Label
+// -------------------------
+
+.label {
+	display: inline-block;
+	background: none;
+	border-radius: 0;
+	padding: 0 0 1px 0;
+	margin:3px 3px;
+	font-weight: bold;
+    font-size: 13px;
+	vertical-align: top;
+	color: @bodyText; 
+	box-shadow: 0 1px 0 0 @contentBg1;
+	-moz-box-shadow: 0 1px 0 0 @contentBg1;
+	-webkit-box-shadow: 0 1px 0 0 @contentBg1;
+
+	&.label-stroke {
+		background: none;
+		color: #999;
+		border: 1px solid #999;
+
+	}
+	&.label-primary { 
+		color: @primaryColor;
+		box-shadow: 0 1px 0 0 @primaryColor;
+		-moz-box-shadow: 0 1px 0 0 @primaryColor;
+		-webkit-box-shadow: 0 1px 0 0 @primaryColor;
+		&.label-stroke {
+			background: none;
+			color: @primaryColor;
+			border: 1px solid @primaryColor;
+		}
+	}
+	&.label-info { 
+		color: @infoColor;
+		box-shadow: 0 1px 0 0 @infoColor;
+		-moz-box-shadow: 0 1px 0 0 @infoColor;
+		-webkit-box-shadow: 0 1px 0 0 @infoColor;
+ 
+		&.label-stroke {
+			background: none;
+			color: @infoColor;
+			border: 1px solid @infoColor;
+		}
+	}
+	&.label-warning { 
+		color: @warningColor;
+		box-shadow: 0 1px 0 0 @warningColor;
+		-moz-box-shadow: 0 1px 0 0 @warningColor;
+		-webkit-box-shadow: 0 1px 0 0 @warningColor;
+ 
+		&.label-stroke {
+			background: none;
+			color: @warningColor;
+			border: 1px solid @warningColor;
+		}
+	}
+	&.label-danger {
+		color: @dangerColor;
+		box-shadow: 0 1px 0 0 @dangerColor;
+		-moz-box-shadow: 0 1px 0 0 @dangerColor;
+		-webkit-box-shadow: 0 1px 0 0 @dangerColor;
+		&.label-stroke {
+			background: none;
+			color: @dangerColor;
+			border: 1px solid @dangerColor;
+		}
+	}
+	&.label-inverse { 
+		color: @inverseColor;
+		box-shadow: 0 1px 0 0 @inverseColor;
+		-moz-box-shadow: 0 1px 0 0 @inverseColor;
+		-webkit-box-shadow: 0 1px 0 0 @inverseColor;
+		&.label-stroke {
+			background: none;
+			color: @inverseColor;
+			border: 1px solid @inverseColor;
+		}
+	}
+	&.label-success { 
+		color: @successColor;
+		box-shadow: 0 1px 0 0 @successColor;
+		-moz-box-shadow: 0 1px 0 0 @successColor;
+		-webkit-box-shadow: 0 1px 0 0 @successColor;
+		&.label-stroke {
+			background: none;
+			color: @successColor;
+			border: 1px solid @successColor;
+		}
+	}
+	&.label-block { display: block; }
+}
+
+.badge {
+	border: 1px solid #fff;
+	&.badge-stroke {
+		background: none;
+		color: #999;
+		border: 1px solid #999;
+	}
+	&.badge-primary { 
+		background: @primaryColor; 
+		&.badge-stroke {
+			background: none;
+			color: @primaryColor;
+			border: 1px solid @primaryColor;
+		}
+	}
+	&.badge-warning { 
+		background: @warningColor; 
+		&.badge-stroke {
+			background: none;
+			color: @warningColor;
+			border: 1px solid @warningColor;
+		}
+	}
+	&.badge-danger { 
+		background: @dangerColor; 
+		&.badge-stroke {
+			background: none;
+			color: @dangerColor;
+			border: 1px solid @dangerColor;
+		}
+	}
+	&.badge-success { 
+		background: @successColor; 
+		&.badge-stroke {
+			background: none;
+			color: @successColor;
+			border: 1px solid @successColor;
+		}
+	}
+	&.badge-inverse { 
+		background: @inverseColor; 
+		&.badge-stroke {
+			background: none;
+			color: @inverseColor;
+			border: 1px solid @inverseColor;
+		}
+	}
+	&.badge-info { 
+		background: @infoColor; 
+		&.badge-stroke {
+			background: none;
+			color: @infoColor;
+			border: 1px solid @infoColor;
+		}
+	}
+	&.badge-white { background: #fff; color:#797979; border: 1px solid #ccc; }
+	&.badge-block { display: block; }
+}

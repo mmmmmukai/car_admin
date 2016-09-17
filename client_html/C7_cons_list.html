@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="paceSimple sidebar sidebar-fusion">
+<head>
+<title>企業様管理者画面｜修繕工事一覧</title>
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="../assets/css/common.css" />
+<script src="../assets/library/jquery/jquery.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/library/jquery/jquery-migrate.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/library/modernizr/modernizr.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/core_less-js/less.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/charts_flot/excanvas.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/core_browser/ie/ie.prototype.polyfill.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script>
+    if (/*@cc_on!@*/false && document.documentMode === 10) {
+        document.documentElement.className += ' ie ie10';
+    }
+</script>
+
+</head>
+<body class="">
+
+    <!-- Main Container Fluid -->
+    <div class="container-fluid menu-hidden">
+
+        <!-- Sidebar Menu -->
+        <div id="menu" class="hidden-print hidden-xs">
+
+            <div id="sidebar-fusion-wrapper">
+                <ul class="menu list-unstyled">
+                    <li class="">
+                        <a href="C4_index.html" class="index">
+                            <i class="fa fa-home"></i>
+                            <span>トップページ</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="C5_mitsumori_list.html">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span>見積もり一覧</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="C7_cons_list.html">
+                            <i class="fa fa-gavel"></i>
+                            <span>修繕工事一覧</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="C9_invoice_list.html">
+                            <i class="fa fa-folder-open-o"></i>
+                            <span>請求書一覧</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="C10_account_info.html">
+                            <i class="fa fa-cog"></i>
+                            <span>基本情報</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- // Sidebar Menu END -->
+
+        <!-- Content -->
+        <div id="content">
+
+            <div class="navbar hidden-print main navbar-default"
+                role="navigation">
+                <div class="user-action user-action-btn-navbar pull-right">
+                    <button
+                        class="btn btn-sm btn-navbar btn-inverse btn-stroke hidden-lg hidden-md">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </button>
+                </div>
+                <a href="index.html" class="logo"> <img
+                    src="../assets/images/logo/logo.jpg" width="32" alt="SMART" /> <span
+                    class="hidden-xs hidden-sm inline-block"><span>MITSU</span>MORI</span>
+                </a>
+                <ul class="main pull-right">
+                    <li class="hidden-xs"><a href="C1_login.html">ログアウト</a></li>
+                </ul>
+            </div>
+            <!-- // END navbar -->
+
+            <h2 class="">修繕工事一覧</h2>
+            <div class="innerLR">
+                <div class="row">
+                    <div class="col-md-0 form-group">
+                        <form class="display-block-inline">
+                            フリーワードで検索：<input type="text" placeholder="名前">
+                                <select  class="btn btn-success" name="">
+                                    <option value="0">ステータスを選択</option>
+                                    <option value="0">工事前</option>
+                                    <option value="0">工事中</option>
+                                    <option value="0">一時中止</option>
+                                    <option value="0">キャンセル</option>
+                                </select>
+                            <input type="submit" value="検索" class="btn btn-primary">
+                        </form>
+                        <div class="btn-group pull-right">
+                            <ul>
+                                <li class=" display-block-inline"><p
+                                        class="btn btn-warning margin-right-10">CSV出力</p></li>
+                                <li class=" display-block-inline margin-right-10">
+                                    <select class="btn btn-primary">
+                                        <option>並び順を選択</option>
+                                        <option>工事開始日</option>
+                                        <option>最新変更日時</option>
+                                    </select>
+                                </li>
+                                <li class=" display-block-inline">
+                                    <select class="btn btn-default">
+                                        <option>表示件数を選択</option>
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>30</option>
+                                        <option>50</option>
+                                        <option>100</option>
+                                    </select>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Widget -->
+                <div class="widget widget-body-white widget-heading-simple">
+                    <div class="widget-body">
+                        <!-- Table -->
+                        <table class="dynamicTable tableTools table checkboxs">
+
+                            <!-- Table heading -->
+                            <thead>
+                                <tr>
+                                    <th width="70">番号</th>
+                                    <th width="200">お名前</th>
+                                    <th width="150">ステータス</th>
+                                    <th width="150">工事開始日</th>
+                                    <th width="150">最新ステータス<br>変更日時</th>
+                                    <th width="70">変更履歴</th>
+                                    <th width="150">最新変更日時</th>
+                                    <th width="70"></th>
+                                </tr>
+                            </thead>
+                            <!-- // Table heading END -->
+
+                            <!-- Table body -->
+                            <tbody>
+
+                                <!-- Table row -->
+                                <tr class="gradeX">
+                                    <td>1</td>
+                                    <td>address here</td>
+                                    <td>工事中</td>
+                                    <td>2015-01-01</td>
+                                    <td>2015-01-01 00:00:00</td>
+                                    <td>なし</td>
+                                    <td>2015-01-01 00:00:00</td>
+                                    <td class="center"><a href="C8_cons_detail.html" class="btn btn-success">詳細</a></td>
+                                </tr>
+                                <!-- // Table row END -->
+
+                                <!-- Table row -->
+                                <tr class="gradeX">
+                                    <td>1</td>
+                                    <td>address here</td>
+                                    <td>工事中</td>
+                                    <td>2015-01-01</td>
+                                    <td>2015-01-01 00:00:00</td>
+                                    <td><a href="C12_changed_logs.html" class="btn btn-warning">履歴</a></td>
+                                    <td>2015-01-01 00:00:00</td>
+                                    <td class="center"><a href="C8_cons_detail.html" class="btn btn-success">詳細</a></td>
+                                </tr>
+                                <!-- // Table row END -->
+
+                            </tbody>
+                            <!-- // Table body END -->
+
+                        </table>
+                        <!-- // Table END -->
+
+
+                    </div>
+                </div>
+                <!-- // Widget END -->
+            </div>
+
+
+        </div>
+        <!-- // Content END -->
+
+        <div class="clearfix"></div>
+        <!-- // Sidebar menu & content wrapper END -->
+
+        <div id="footer" class="hidden-print">
+
+            <!--  Copyright Line -->
+            <div class="copy">&copy; MITSUMORI - All Rights Reserved.</div>
+            <!--  End Copyright Line -->
+
+        </div>
+
+        <!-- // Footer END -->
+
+    </div>
+    <!-- // Main Container Fluid END -->
+
+
+    <!-- Global -->
+    <script data-id="App.Config">
+        var App = {};
+        var basePath = '', commonPath = '../assets/', rootPath = '../', DEV = false, componentsPath = '../assets/components/';
+
+        var primaryColor = '#c72a25', dangerColor = '#b55151', successColor = '#609450', infoColor = '#4a8bc2', warningColor = '#ab7a4b', inverseColor = '#45484d';
+
+        var themerPrimaryColor = primaryColor;
+    </script>
+
+    <script
+        src="../assets/library/bootstrap/js/bootstrap.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/plugins/core_nicescroll/jquery.nicescroll.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/plugins/core_breakpoints/breakpoints.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/plugins/core_preload/pace.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/components/core_preload/preload.pace.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/components/forms_elements_fuelux-checkbox/fuelux-checkbox.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/components/menus/sidebar.main.init.js?v=v1.0.0-rc1"></script>
+    <script
+        src="../assets/components/menus/sidebar.collapse.init.js?v=v1.0.0-rc1"></script>
+    <script
+        src="../assets/plugins/forms_elements_bootstrap-select/js/bootstrap-select.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/components/forms_elements_bootstrap-select/bootstrap-select.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/plugins/forms_elements_bootstrap-datepicker/js/bootstrap-datepicker.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script
+        src="../assets/components/forms_elements_bootstrap-datepicker/bootstrap-datepicker.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+    <script src="../assets/components/core/core.init.js?v=v1.0.0-rc1"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+// Upcoming Tasks List
+
+.widget .list-group-item {
+  background: none;
+  border-bottom:1px solid #dfdfdf !important;
+  box-shadow: none;
+  label { margin:0 !important;
+    span:hover { cursor: pointer;}
+  }
+
+  &:hover {
+    background: lighten(#efefef,3%);
+  }
+
+  // Round the first and last items
+
+  border:none;
+  margin-bottom: 0;
+
+
+
+  // Align badges within list items
+  > a.close {
+    float: right;
+    font-size:14px;
+    padding-top:4px;
+    &:hover { color: @dangerColor !important;}
+  }
+
+  .checkbox-custom.checkbox-custom-2 {
+    font-weight: 400;
+    font-size:16px;
+    input[type=checkbox] {
+      /* IE cannot fire events if display none or visibility hidden */
+      position: relative;
+      left: -99999px;
+    }
+
+    i {
+      font-size: 1.14em;
+      margin-right:5px;
+      color: lighten(@bodyText,20%);
+
+      &.checked {
+        color: @successColor;
+        margin-left: -20px !important;
+
+      }
+      &.disabled {
+        /*disabled */
+        color: #efefef;
+      }
+    }
+  }
+
+
+}

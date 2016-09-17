@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html class="paceSimple sidebar sidebar-fusion">
+<head>
+<title>企業様管理者画面｜見積もり依頼詳細</title>
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="../assets/css/common.css" />
+<script src="../assets/library/jquery/jquery.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/library/jquery/jquery-migrate.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/library/modernizr/modernizr.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/core_less-js/less.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/charts_flot/excanvas.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/core_browser/ie/ie.prototype.polyfill.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script>
+	if (/*@cc_on!@*/false && document.documentMode === 10) {
+		document.documentElement.className += ' ie ie10';
+	}
+</script>
+
+</head>
+<body class="">
+
+	<!-- Main Container Fluid -->
+	<div class="container-fluid menu-hidden">
+
+        <!-- Sidebar Menu -->
+        <div id="menu" class="hidden-print hidden-xs">
+
+            <div id="sidebar-fusion-wrapper">
+                <ul class="menu list-unstyled">
+                    <li class="">
+                        <a href="C4_index.html" class="index">
+                            <i class="fa fa-home"></i>
+                            <span>トップページ</span>
+                        </a>
+                    </li>
+
+                    <li class="active">
+                        <a href="C5_mitsumori_list.html">
+                            <i class="fa fa-pencil-square-o"></i>
+                            <span>見積もり一覧</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="C7_cons_list.html">
+                            <i class="fa fa-gavel"></i>
+                            <span>修繕工事一覧</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="C9_invoice_list.html">
+                            <i class="fa fa-folder-open-o"></i>
+                            <span>請求書一覧</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="C10_account_info.html">
+                            <i class="fa fa-cog"></i>
+                            <span>基本情報</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- // Sidebar Menu END -->
+
+		<!-- Content -->
+		<div id="content">
+
+			<div class="navbar hidden-print main navbar-default"
+				role="navigation">
+				<div class="user-action user-action-btn-navbar pull-right">
+					<button
+						class="btn btn-sm btn-navbar btn-inverse btn-stroke hidden-lg hidden-md">
+						<i class="fa fa-bars fa-2x"></i>
+					</button>
+				</div>
+				<a href="index.html" class="logo"> <img
+					src="../assets/images/logo/logo.jpg" width="32" alt="SMART" /> <span
+					class="hidden-xs hidden-sm inline-block"><span>MITSU</span>MORI</span>
+				</a>
+				<ul class="main pull-right">
+					<li class="hidden-xs"><a href="C1_login.html">ログアウト</a></li>
+				</ul>
+			</div>
+			<!-- // END navbar -->
+
+			<div class="innerLR">
+
+
+
+
+				<div class="innerTB">
+					<div class="margin-bottom-10">
+						<h2 class="display-block-inline">見積もり依頼が届きました</h2>
+                        <div class="pull-right">
+                        <ul class="display-block-inline margin-right-10">
+                            <li class="display-block-inline margin-right-10">依頼日：2015-01-01</li>
+                            <li class="display-block-inline margin-right-10">更新日：2015-01-01</li>
+                        </ul>
+                            <a class="btn btn-primary display-block-inline"
+                            href="A12_mitsumori_list.html">一覧へ戻る</a>
+                        </div>
+
+					</div>
+<div class="row">
+            <div class="col-md-9">
+            <h4>依頼人詳細</h4>
+                <div class="widget innerAll widget-tabs widget-small widget-inverse">
+                <dl class="display-block-inline margin-bottom-none">
+                                    <dt>依頼人番号</dt>
+                                    <dd>001</dd>
+                                    <dt>名前</dt>
+                                    <dd>user person here</dd>
+                                    <dt>住所</dt>
+                                    <dd>user address here</dd>
+                                    <dt>連絡先</dt>
+                                    <dd>02-0000-2222</dd>
+                                    <dt>Email</dt>
+                                    <dd>user-email@asd.com</dd>
+                                    <dt>種別</dt>
+                                    <dd>個人</dd>
+                                </dl>
+                </div>
+            </div>
+            <div class="col-md-3">
+            <h4>簡易見積もり詳細</h4>
+                <div class="widget widget-success widget-small half">
+                    <div class="widget-body padding-none">
+                        <div class="">
+                            <ul class="list-group margin-none text-center">
+                                <li class="list-group-item">2つ</li>
+                                <li class="list-group-item">全体</li>
+                                <li class="list-group-item">倒壊</li>
+                                <li class="list-group-item">233333円</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</div>
+
+					<div class="row">
+						<div class="col-md-0">
+                        <h4>見積もり詳細</h4>
+							<div
+								class="widget icon-widget widget-primary innerAll text-weight-regular">
+								<dl class="display-block-inline margin-bottom-none">
+									<dt>施工対象</dt>
+									<dd>新築物件</dd>
+									<dt>駐車スペース</dt>
+									<dd>敷地内可</dd>
+									<dt>補修場所</dt>
+									<dd>木部<br>シンク</dd>
+									<dt>補修素材</dt>
+									<dd>木材</dd>
+									<dt>補修場所の状況</dt>
+									<dd>破損がひどい</dd>
+									<dt>補修範囲</dt>
+									<dd>破損したところのみ</dd>
+									<dt>ご要望</dt>
+									<dd>仕上がりにこだわりたい</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="innerTB">
+
+                    <div class="row widget margin-none">
+                    <h4 class="innerAll">写真</h4>
+                        <!-- data start -->
+                        <div class="col-md-3 col-sm-4">
+                            <div class="widget icon-widget widget-primary widget-body-white">
+                                <div class="widget-body innerAll half ">
+                                    <div class="background-icon">
+                                        <img src="../assets/images/gallery/2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--data end-->
+                        <!-- data start -->
+                        <div class="col-md-3 col-sm-4">
+                            <div class="widget icon-widget widget-primary widget-body-white">
+                                <div class="widget-body innerAll half ">
+                                    <div class="background-icon">
+                                        <img src="../assets/images/gallery/2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--data end-->
+                        <!-- data start -->
+                        <div class="col-md-3 col-sm-4">
+                            <div class="widget icon-widget widget-primary widget-body-white">
+                                <div class="widget-body innerAll half ">
+                                    <div class="background-icon">
+                                        <img src="../assets/images/gallery/2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--data end-->
+                        <!-- data start -->
+                        <div class="col-md-3 col-sm-4">
+                            <div class="widget icon-widget widget-primary widget-body-white">
+                                <div class="widget-body innerAll half ">
+                                    <div class="background-icon">
+                                        <img src="../assets/images/gallery/2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--data end-->
+                        <!-- data start -->
+                        <div class="col-md-3 col-sm-4">
+                            <div class="widget icon-widget widget-primary widget-body-white">
+                                <div class="widget-body innerAll half ">
+                                    <div class="background-icon">
+                                        <img src="../assets/images/gallery/2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--data end-->
+                    </div>
+</div>
+
+<div class="text-center innerAll">
+<button class="btn btn-default display-block-inline"><i class="fa fa-times"></i> 依頼を受けない</button>
+<button class="btn btn-success display-block-inline"><i class="fa fa-check"></i> 依頼を受ける</button>
+</div>
+
+                <!-- Widget -->
+                <div class="widget widget-body-white widget-heading-simple">
+                    <div class="widget-body">
+                    <div class="row innerAll">
+                    <dl>
+                        <dt class="display-block-inline">工事開始予定日</dt>
+                        <dd class="display-block-inline fix-input">
+                            <div class="input-group date datepicker2 col-sm-4 w300">
+                                <input class="form-control" type="text" value="14 February 2013" />
+                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                            </div>
+                        </dd>
+                        <dt class="display-block-inline">工事開始予定日</dt>
+                        <dd class="display-block-inline fix-input">
+                            <div class="input-group date datepicker2 col-sm-4 w300">
+                                <input class="form-control" type="text" value="14 February 2013" />
+                                <span class="input-group-addon"><i class="fa fa-th"></i></span>
+                            </div>
+                        </dd>
+                    </dl>
+                    </div>
+                        <!-- Table -->
+                        <table class="dynamicTable tableTools table checkboxs">
+
+                            <!-- Table heading -->
+                            <thead>
+                                <tr>
+                                    <th width="300">補修内容</th>
+                                    <th width="100">数量</th>
+                                    <th width="100">単位</th>
+                                    <th width="150">単価</th>
+                                    <th width="200">合計</th>
+                                </tr>
+                            </thead>
+                            <!-- // Table heading END -->
+
+                            <!-- Table body -->
+                            <tbody>
+
+                                <!-- Table row -->
+                                <tr class="gradeX">
+                                    <td>補修内容補修内容</td>
+                                    <td>2</td>
+                                    <td>式</td>
+                                    <td>20000</td>
+                                    <td>40000</td>
+                                </tr>
+                                <!-- // Table row END -->
+
+                                <!-- Table row -->
+                                <tr class="gradeX">
+                                    <td>補修内容補修内容</td>
+                                    <td>2</td>
+                                    <td>式</td>
+                                    <td>20000</td>
+                                    <td>40000</td>
+                                </tr>
+                                <!-- // Table row END -->
+
+                                <!-- Table row -->
+                                <tr class="gradeX">
+                                    <td>補修内容補修内容</td>
+                                    <td>2</td>
+                                    <td>式</td>
+                                    <td>20000</td>
+                                    <td>40000</td>
+                                </tr>
+                                <!-- // Table row END -->
+
+                            </tbody>
+                            <!-- // Table body END -->
+
+                        </table>
+                        <!-- // Table END -->
+
+
+                    </div>
+                </div>
+                <!-- // Widget END -->
+
+
+<a href="#modal-2" data-toggle="modal" class="btn btn-info"><i class="fa fa-fw fa-plus"></i> 項目追加</a>
+<!-- Modal -->
+<div class="modal fade" id="modal-2">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal body -->
+            <div class="modal-body innerAll">
+
+                                    <dl class="display-block-inline margin-bottom-none">
+                                        <dt>補修内容</dt>
+                                        <dd>
+                                        <input type="text">
+                                            <p class="error-message">質問内容を入力してください。</p>
+                                        </dd>
+                                        <dt>数量</dt>
+                                        <dd>
+                                        <input type="text">
+                                            <p class="error-message">数量を入力してください。</p>
+                                        </dd>
+                                        <dt>単位</dt>
+                                        <dd>
+                                        <input type="text">
+                                            <p class="error-message">単位を入力してください。</p>
+                                        </dd>
+                                        <dt>単価</dt>
+                                        <dd>
+                                        <input type="text">
+                                            <p class="error-message">単価を入力してください。</p>
+                                        </dd>
+                                    </dl>
+                                </div>
+
+            <!-- // Modal body END -->
+            <div class="modal-footer center margin-none">
+                <a href="#" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> 閉じる</a>
+                <a href="#" class="btn btn-success"><i class="fa fa-check"></i> 登録</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- // Modal END -->
+
+
+				</div>
+			</div>
+
+
+		</div>
+		<!-- // Content END -->
+
+		<div class="clearfix"></div>
+		<!-- // Sidebar menu & content wrapper END -->
+
+		<div id="footer" class="hidden-print">
+
+			<!--  Copyright Line -->
+			<div class="copy">&copy; MITSUMORI - All Rights Reserved.</div>
+			<!--  End Copyright Line -->
+
+		</div>
+
+		<!-- // Footer END -->
+
+	</div>
+	<!-- // Main Container Fluid END -->
+
+
+	<!-- Global -->
+	<script data-id="App.Config">
+		var App = {};
+		var basePath = '', commonPath = '../assets/', rootPath = '../', DEV = false, componentsPath = '../assets/components/';
+
+		var primaryColor = '#c72a25', dangerColor = '#b55151', successColor = '#609450', infoColor = '#4a8bc2', warningColor = '#ab7a4b', inverseColor = '#45484d';
+
+		var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script
+		src="../assets/library/bootstrap/js/bootstrap.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/core_nicescroll/jquery.nicescroll.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/core_breakpoints/breakpoints.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/core_preload/pace.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/core_preload/preload.pace.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/forms_elements_fuelux-checkbox/fuelux-checkbox.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/menus/sidebar.main.init.js?v=v1.0.0-rc1"></script>
+	<script
+		src="../assets/components/menus/sidebar.collapse.init.js?v=v1.0.0-rc1"></script>
+	<script
+		src="../assets/plugins/forms_elements_bootstrap-select/js/bootstrap-select.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/forms_elements_bootstrap-select/bootstrap-select.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/forms_elements_bootstrap-datepicker/js/bootstrap-datepicker.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/forms_elements_bootstrap-datepicker/bootstrap-datepicker.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+
+	<script src="../assets/components/core/core.init.js?v=v1.0.0-rc1"></script>
+</body>
+</html>

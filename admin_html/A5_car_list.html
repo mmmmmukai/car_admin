@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html class="paceSimple sidebar sidebar-fusion">
+<head>
+<title>管理者画面｜登録車両一覧</title>
+
+<!-- Meta -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" href="../assets/css/common.css" />
+<script src="../assets/library/jquery/jquery.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/library/jquery/jquery-migrate.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/library/modernizr/modernizr.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/core_less-js/less.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/charts_flot/excanvas.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script src="../assets/plugins/core_browser/ie/ie.prototype.polyfill.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+<script>
+	if (/*@cc_on!@*/false && document.documentMode === 10) {
+		document.documentElement.className += ' ie ie10';
+	}
+</script>
+
+</head>
+<body class="">
+
+	<!-- Main Container Fluid -->
+	<div class="container-fluid menu-hidden">
+
+		<!-- Sidebar Menu -->
+		<div id="menu" class="hidden-print hidden-xs">
+
+            <div id="sidebar-fusion-wrapper">
+                <ul class="menu list-unstyled">
+                    <li class="">
+                        <a href="A3_index.html" class="index">
+                            <i class="fa fa-home"></i>
+                            <span>トップページ</span>
+                        </a>
+                    </li>
+
+                    <li class="hasSubmenu">
+                        <a href="#menu-car" data-toggle="collapse">
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                            <span>車両</span>
+                        </a>
+                        <ul class="collapse" id="menu-car">
+                            <li class="">
+                                <a href="A4_car_new.html" class="no-ajaxify">
+                                    <i class="fa fa-pencil"></i>
+                                    <span>新規作成</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="A5_car_list.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="#menu-car_class" data-toggle="collapse">
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                            <span>車両クラス</span>
+                        </a>
+                        <ul class="collapse" id="menu-car_class">
+                            <li class="">
+                                <a href="A8_car_class_config.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="hasSubmenu">
+                        <a href="#menu-car_ctg" data-toggle="collapse">
+                            <i class="fa fa-check-square" aria-hidden="true"></i>
+                            <span>車両カテゴリ</span>
+                        </a>
+                        <ul class="collapse" id="menu-car_ctg">
+                            <li class="">
+                                <a href="A9_car_ctg_config.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="hasSubmenu">
+                        <a href="#menu-car_station" data-toggle="collapse">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span>ステーション</span>
+                        </a>
+                        <ul class="collapse" id="menu-car_station">
+                            <li class="">
+                                <a href="A10_car_station_new.html" class="no-ajaxify">
+                                    <i class="fa fa-pencil"></i>
+                                    <span>新規作成</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="A11_car_station_list.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="#menu-car_maker" data-toggle="collapse">
+                            <i class="fa fa-building" aria-hidden="true"></i>
+                            <span>メーカー</span>
+                        </a>
+                        <ul class="collapse" id="menu-car_maker">
+                            <li class="">
+                                <a href="A14_car_maker_config.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="hasSubmenu">
+                        <a href="#menu-text" data-toggle="collapse">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            <span>テキスト</span>
+                        </a>
+                        <ul class="collapse" id="menu-text">
+                            <li class="">
+                                <a href="A15_text_list.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="hasSubmenu">
+                        <a href="#menu-question" data-toggle="collapse">
+                            <i class="fa fa-question-circle" aria-hidden="true"></i>
+                            <span>FAQ</span>
+                        </a>
+                        <ul class="collapse" id="menu-question">
+                            <li class="">
+                                <a href="A17_faq_new.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>新規作成</span>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="A18_faq_list.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="hasSubmenu">
+                        <a href="#menu-text_faq_ctg" data-toggle="collapse">
+                            <i class="fa fa-check-circle" aria-hidden="true"></i>
+                            <span>カテゴリー</span>
+                        </a>
+                        <ul class="collapse" id="menu-text_faq_ctg">
+                            <li class="">
+                                <a href="A25_text_faq_ctg_config.html" class="no-ajaxify">
+                                    <i class="fa fa-reorder"></i>
+                                    <span>一覧</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="A21_admin_info.html">
+                            <i class="fa fa-cog"></i>
+                            <span>基本情報</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+		</div>
+		<!-- // Sidebar Menu END -->
+
+		<!-- Content -->
+		<div id="content">
+
+			<div class="navbar hidden-print main navbar-default"
+				role="navigation">
+				<div class="user-action user-action-btn-navbar pull-right">
+					<button
+						class="btn btn-sm btn-navbar btn-inverse btn-stroke hidden-lg hidden-md">
+						<i class="fa fa-bars fa-2x"></i>
+					</button>
+				</div>
+				<a href="A3_index.html" class="logo"> <img
+					src="#" width="32" alt=""> <span
+					class="hidden-xs hidden-sm inline-block"><span>BIG </span>Car Share</span>
+				</a>
+				<ul class="main pull-right">
+					<li class="hidden-xs"><a href="A1_login.html">ログアウト</a></li>
+				</ul>
+			</div>
+			<!-- // END navbar -->
+
+			<h2 class="">登録車両一覧</h2>
+			<div class="innerLR">
+				<div class="row">
+					<div class="col-md-0 form-group">
+						<form class="display-block-inline">
+							名前やIDで検索：<input type="text" placeholder="名前、ID">
+                                <select  class="btn btn-success" name="">
+                                <option value="">都道府県を選択</option>
+                                                <option value="">東京都</option>
+                                                <option value="">神奈川県</option>
+                                                <option value="">千葉県</option>
+                                                <option value="">埼玉県</option>
+                                                <option value="">愛知県</option>
+                                                <option value="">大阪府</option>
+                                                <option value="">兵庫県</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">ステーションを選択</option>
+                                                <option value="">足立店</option>
+                                                <option value="">武蔵村山店</option>
+                                                <option value="">江戸川店</option>
+                                                <option value="">練馬店</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">メーカーを選択</option>
+                                                <option value="">レクサス</option>
+                                                <option value="">トヨタ</option>
+                                                <option value="">日産</option>
+                                                <option value="">ホンダ</option>
+                                                <option value="">マツダ</option>
+                                                <option value="">三菱</option>
+                                                <option value="">スバル</option>
+                                                <option value="">ダイハツ</option>
+                                                <option value="">スズキ</option>
+                                                <option value="">ミツオカ</option>
+                                                <option value="">その他</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">クラスから選択</option>
+                                                <option value="">軽自動車</option>
+                                                <option value="">コンパクトカー</option>
+                                                <option value="">ミニバン・ワンボックス</option>
+                                                <option value="">セダン</option>
+                                                <option value="">クーペ</option>
+                                                <option value="">ステーションワゴン</option>
+                                                <option value="">SUV・クロカン</option>
+                                                <option value="">軽トラック・軽バン</option>
+                                                <option value="">その他</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">色から選択</option>  
+                                                <option value="">白系</option>
+                                                <option value="">赤系</option>
+                                                <option value="">青系</option>
+                                                <option value="">黒系</option>
+                                                <option value="">黄色系</option>
+                                                <option value="">シルバー系</option>
+                                                <option value="">その他</option>
+                                   </select>
+                                    <input type="submit" value="検索" class="btn btn-primary">
+						</form>
+						<div class="btn-group pull-right">
+							<ul>
+								<li class=" display-block-inline"><p
+										class="btn btn-warning margin-right-10">CSV出力</p></li>
+                                        <li class=" display-block-inline margin-right-10"><select
+                                    class="btn btn-primary">
+                                        <option>並び順を選択</option>
+                                        <option>登録日順</option>
+                                        <option>id順</option>
+                                        <option>乗車定員数順</option>
+                                </select></li>
+								<li class=" display-block-inline"><select
+									class="btn btn-default">
+										<option>表示件数を選択</option>
+										<option>10</option>
+										<option>20</option>
+										<option>30</option>
+										<option>50</option>
+										<option>100</option>
+								</select></li>
+							</ul>
+
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Widget -->
+				<div class="widget widget-body-white widget-heading-simple">
+					<div class="widget-body">
+						<!-- Table -->
+						<table class="dynamicTable tableTools table checkboxs">
+
+							<!-- Table heading -->
+							<thead>
+								<tr>
+									<th width="70">番号</th>
+									<th width="200">車種</th>
+									<th width="200">登録ステーション</th>
+									<th width="100">クラス</th>
+									<th width="100">メーカー</th>
+									<th width="70">定員</th>
+									<th width="70">登録日</th>
+                                    
+								</tr>
+							</thead>
+							<!-- // Table heading END -->
+
+							<!-- Table body -->
+							<tbody>
+
+								<!-- Table row -->
+								<tr class="gradeX">
+									<td>1</td>
+									<td><a href="A6_car_detail.html">N-BOX</a></td>
+									<td><a href="A5_car_list.html">所沢店</a></td>
+									<td><a href="A5_car_list.html">軽自動車</a></td>
+									<td><a href="A5_car_list.html">ホンダ</a></td>
+									<td>4</td>
+                                    <td>2016年5月30日</td>
+									<td class="center"><a href="A6_car_detail.html"
+										class="btn btn-success">詳細
+									</a>
+                                    </td>
+								</tr>
+								<!-- // Table row END -->
+								<!-- Table row -->
+								<tr class="gradeX">
+									<td>1</td>
+									<td><a href="A6_car_detail.html">N-BOX</a></td>
+									<td><a href="A5_car_list.html">所沢店</a></td>
+									<td><a href="A5_car_list.html">軽自動車</a></td>
+									<td><a href="A5_car_list.html">ホンダ</a></td>
+									<td>4</td>
+                                    <td>2016年5月30日</td>
+									<td class="center"><a href="A6_car_detail.html"
+										class="btn btn-success">詳細
+									</a>
+                                    </td>
+								</tr>
+								<!-- // Table row END -->
+
+							</tbody>
+							<!-- // Table body END -->
+
+						</table>
+						<!-- // Table END -->
+
+
+					</div>
+				</div>
+				<!-- // Widget END -->
+			</div>
+
+
+		</div>
+		<!-- // Content END -->
+
+		<div class="clearfix"></div>
+		<!-- // Sidebar menu & content wrapper END -->
+
+		<div id="footer" class="hidden-print">
+
+			<!--  Copyright Line -->
+			<div class="copy">&copy; MITSUMORI - All Rights Reserved.</div>
+			<!--  End Copyright Line -->
+
+		</div>
+
+		<!-- // Footer END -->
+
+	</div>
+	<!-- // Main Container Fluid END -->
+
+
+	<!-- Global -->
+	<script data-id="App.Config">
+		var App = {};
+		var basePath = '', commonPath = '../assets/', rootPath = '../', DEV = false, componentsPath = '../assets/components/';
+
+		var primaryColor = '#c72a25', dangerColor = '#b55151', successColor = '#609450', infoColor = '#4a8bc2', warningColor = '#ab7a4b', inverseColor = '#45484d';
+
+		var themerPrimaryColor = primaryColor;
+	</script>
+
+	<script
+		src="../assets/library/bootstrap/js/bootstrap.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/core_nicescroll/jquery.nicescroll.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/core_breakpoints/breakpoints.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/core_preload/pace.min.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/core_preload/preload.pace.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/forms_elements_fuelux-checkbox/fuelux-checkbox.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/menus/sidebar.main.init.js?v=v1.0.0-rc1"></script>
+	<script
+		src="../assets/components/menus/sidebar.collapse.init.js?v=v1.0.0-rc1"></script>
+	<script
+		src="../assets/plugins/forms_elements_bootstrap-select/js/bootstrap-select.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/forms_elements_bootstrap-select/bootstrap-select.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/plugins/forms_elements_bootstrap-datepicker/js/bootstrap-datepicker.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script
+		src="../assets/components/forms_elements_bootstrap-datepicker/bootstrap-datepicker.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
+	<script src="../assets/components/core/core.init.js?v=v1.0.0-rc1"></script>
+</body>
+</html>

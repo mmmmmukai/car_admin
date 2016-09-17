@@ -1,0 +1,129 @@
+.alert-wrapper {
+	position: fixed;
+	overflow: hidden;
+	right: 10px;
+	top: 10 + @navbarMainHeight;
+	z-index: 1000;
+	.alert {
+		position: relative;
+		max-width: 300px;
+		border-radius: 0;
+		padding: 10px 8px;
+		.close {
+			top: 0px;
+			position: relative;
+			font-size: 16px;
+			text-shadow:none;
+			opacity: .8;
+		}
+		.title {
+			display: block;	
+			font-size: 16px;
+			line-height: 1;
+			padding-bottom: 10px;
+
+			i {
+				font-size: 18px;
+				position: relative;
+				top: 1px;
+			}
+		}
+		.content {
+			padding:7px; 
+
+		}
+		&.alert-inverse {
+			background-color: darken(@inverseColor,15%);
+			.close {
+				color: lighten(@inverseColor, 50%);
+			}
+			.title {
+				color: lighten(@inverseColor, 40%);	
+			}
+			.content {
+				background: darken(@inverseColor, 20%);
+				color:lighten(@inverseColor, 70%);
+			}
+		}
+		&.alert-primary {
+			background-color: @primaryColor;	
+			.close {
+				color: lighten(@primaryColor, 50%);
+			}
+			.title {
+				color: lighten(@primaryColor, 40%);	
+			}
+			.content {
+				background: lighten(@primaryColor, 10%);
+				color:lighten(@primaryColor, 70%);
+			}
+		}
+		&.alert-danger {
+			background-color: @dangerColor;	
+			.close {
+				color: lighten(@dangerColor, 50%);
+			}
+			.title {
+				color: lighten(@dangerColor, 40%);	
+			}
+			.content {
+				background: lighten(@dangerColor, 10%);
+				color:lighten(@dangerColor, 70%);
+			}
+		}
+
+		&.alert-success {
+			background-color: @successColor;	
+			.close {
+				color: lighten(@successColor, 50%);
+			}
+			.title {
+				color: lighten(@successColor, 40%);	
+			}
+			.content {
+				background: lighten(@successColor, 10%);
+				color:lighten(@successColor, 70%);
+			}
+		}
+
+		&.alert-info {
+			background-color: @infoColor;	
+			.close {
+				color: lighten(@infoColor, 50%);
+			}
+			.title {
+				color: lighten(@infoColor, 40%);	
+			}
+			.content {
+				background: lighten(@infoColor, 10%);
+				color:lighten(@infoColor, 70%);
+			}
+		}
+		&.alert-primary {
+			background-color: @primaryColor;	
+			.close {
+				color: lighten(@primaryColor, 50%);
+			}
+			.title {
+				color: lighten(@primaryColor, 40%);	
+			}
+			.content {
+				background: lighten(@primaryColor, 10%);
+				color:lighten(@primaryColor, 70%);
+			}
+		}
+		&.alert-warning {
+			background-color: @warningColor;	
+			.close {
+				color: lighten(@warningColor, 50%);
+			}
+			.title {
+				color: lighten(@warningColor, 40%);	
+			}
+			.content {
+				background: lighten(@warningColor, 10%);
+				color:lighten(@warningColor, 70%);
+			}
+		}
+	}
+}
