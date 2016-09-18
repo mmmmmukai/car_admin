@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="paceSimple sidebar sidebar-fusion">
 <head>
-<title>管理者画面｜車両新規登録</title>
+<title>管理者画面｜登録車両一覧</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -204,65 +204,35 @@
 			</div>
 			<!-- // END navbar -->
 
+			<h2 class="">登録車両一覧</h2>
 			<div class="innerLR">
-
-
-				<div class="innerTB">
-					<div class="margin-bottom-10">
-						<h2 class="display-block-inline">車両登録新規作成</h2>
-					</div>
-					<div class="row">
-						<div class="col-md-0">
                     <ul class="list-unstyled display-block-inline">
                       <li class=" display-block-inline"><a href="A3_index.html">トップ</a> &gt;</li>
-                      <li class=" display-block-inline">車両登録新規作成</li>
+                      <li class=" display-block-inline"><a href="">登録車両一覧</a></li>
                     </ul>
-							<form>
-								<div
-									class="widget icon-widget widget-primary innerAll text-weight-regular">
-									<dl class="display-block-inline margin-bottom-none">
-                                        <dt>登録日</dt>
-                                        <dd>
-											<input type="datetime-local" name="" style="width:150px;">
-											<p class="error-message">登録日を入力してください。例：2016年5月30日</p>
-                                        </dd>
-										<dt>ナンバー</dt>
-										<dd>
-											<input type="text" style="width:200px;">
-											<p class="error-message">ナンバーを入力してください。例：世田谷300さ12-34</p>
-										</dd>
-                                        <dt>クラス</dt>
-                                        <dd>
-                                            <form action="">
-                                    <select class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">軽自動車</option>
-                                                <option value="">コンパクトカー</option>
-                                                <option value="">ミニバン・ワンボックス</option>
-                                                <option value="">セダン</option>
-                                                <option value="">クーペ</option>
-                                                <option value="">ステーションワゴン</option>
-                                                <option value="">SUV・クロカン</option>
-                                                <option value="">軽トラック・軽バン</option>
-                                                <option value="">その他</option>
-                                              </select>
-                                            </form>
-                                        </dd>
-                                        <dt>車両カテゴリー</dt>
-                                        <dd>
-                                            <p class="display-block-inline"><input type="checkbox" name="" value="">大人数向き</p>
-                                            <p class="display-block-inline"><input type="checkbox" name="" value="">設備充実</p>
-                                            <p class="display-block-inline"><input type="checkbox" name="" value="">女性におすすめ</p>
-                                            <p class="display-block-inline"><input type="checkbox" name="" value="">小型車</p>
-                                            <p class="display-block-inline"><input type="checkbox" name="" value="">介護OK</p>
-                                            <p class="display-block-inline"><input type="checkbox" name="" value="">自動ブレーキ搭載</p>
-
-                                    </dd>
-                                        <dt>メーカー</dt>
-                                        <dd>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
+				<div class="row">
+					<div class="col-md-0 form-group">
+						<form class="display-block-inline">
+							名前やIDで検索：<input type="text" placeholder="名前、ID">
+                                <select  class="btn btn-success" name="">
+                                <option value="">都道府県を選択</option>
+                                                <option value="">東京都</option>
+                                                <option value="">神奈川県</option>
+                                                <option value="">千葉県</option>
+                                                <option value="">埼玉県</option>
+                                                <option value="">愛知県</option>
+                                                <option value="">大阪府</option>
+                                                <option value="">兵庫県</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">ステーションを選択</option>
+                                                <option value="">足立店</option>
+                                                <option value="">武蔵村山店</option>
+                                                <option value="">江戸川店</option>
+                                                <option value="">練馬店</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">メーカーを選択</option>
                                                 <option value="">レクサス</option>
                                                 <option value="">トヨタ</option>
                                                 <option value="">日産</option>
@@ -274,39 +244,21 @@
                                                 <option value="">スズキ</option>
                                                 <option value="">ミツオカ</option>
                                                 <option value="">その他</option>
-                                              </select>
-                                            </form>
-                                        </dd>
-										<dt>車種</dt>
-										<dd>
-											<input type="text" style="width:200px;">
-											<p class="error-message">車種を入力してください。例：N-BOX</p>
-										</dd>
-										<dt>定員</dt>
-										<dd>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">2名</option>
-                                                <option value="">3名</option>
-                                                <option value="">4名</option>
-                                                <option value="">5名</option>
-                                                <option value="">6名</option>
-                                                <option value="">7名</option>
-                                                <option value="">8名</option>
-                                                <option value="">9名</option>
-                                                <option value="">10名</option>
-                                                <option value="">11名</option>
-                                                <option value="">12名</option>
-                                                <option value="">13名以上</option>
-                                              </select>
-                                            </form>
-										</dd>
-										<dt>ボディカラー</dt>
-										<dd>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">クラスから選択</option>
+                                                <option value="">軽自動車</option>
+                                                <option value="">コンパクトカー</option>
+                                                <option value="">ミニバン・ワンボックス</option>
+                                                <option value="">セダン</option>
+                                                <option value="">クーペ</option>
+                                                <option value="">ステーションワゴン</option>
+                                                <option value="">SUV・クロカン</option>
+                                                <option value="">軽トラック・軽バン</option>
+                                                <option value="">その他</option>
+                                    </select>
+                                    <select  class="btn btn-success" name="">
+                                    <option value="">色から選択</option>  
                                                 <option value="">白系</option>
                                                 <option value="">赤系</option>
                                                 <option value="">青系</option>
@@ -314,119 +266,109 @@
                                                 <option value="">黄色系</option>
                                                 <option value="">シルバー系</option>
                                                 <option value="">その他</option>
-                                              </select>
-                                            </form>
-											<input type="text" style="width:200px;">
-											<p class="error-message">ボディーカラーを入力してください。例：メタリックブルー</p>
-										</dd>
-										<dt>寸法</dt>
-										<dd>
-											<input type="text" style="width:300px;">
-											<p class="error-message">寸法を入力してください。例：3.395m／1.475m／1.670m（全長／全幅／全高）</p>
-										</dd>
-										<dt>油種</dt>
-										<dd>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">ハイオク</option>
-                                                <option value="">レギュラー</option>
-                                                <option value="">軽油</option>
-                                                <option value="">その他</option>
-                                              </select>
-                                            </form>
-										</dd>
-										<dt>登録先カーステーション</dt>
-										<dd>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">東京都</option>
-                                                <option value="">神奈川県</option>
-                                                <option value="">千葉県</option>
-                                                <option value="">埼玉県</option>
-                                                <option value="">愛知県</option>
-                                                <option value="">大阪府</option>
-                                                <option value="">兵庫県</option>
-                                              </select>
-                                            </form>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">足立店</option>
-                                                <option value="">武蔵村山店</option>
-                                                <option value="">江戸川店</option>
-                                                <option value="">練馬店</option>
-                                              </select>
-                                            </form>
-										</dd>
-										<dt>カーナビ有無</dt>
-										<dd>
-                                            <form action="">
-                                              <select name="" class="btn-select">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">あり</option>
-                                                <option value="">なし</option>
-                                              </select>
-                                            </form>
-										</dd>
-										<dt>1キロあたりの金額</dt>
-										<dd>
-											<input type="text" style="width:200px;">
-											<p class="error-message">1キロあたりの金額を入力してください。例：15円</p>
-										</dd>
-										<dt>12時間あたりの金額</dt>
-										<dd>
-											<input type="text" style="width:200px;">
-											<p class="error-message">12時間あたりの金額を入力してください。例：3980円</p>
-										</dd>
-										<dt>24時間あたりの金額</dt>
-										<dd>
-											<input type="text" style="width:200px;">
-											<p class="error-message">24時間あたりの金額を入力してください。例：5000円</p>
-										</dd>
-										<dt>以後1日増える場合の金額</dt>
-										<dd>
-											<input type="text" style="width:200px;">
-											<p class="error-message">以後1日増える場合の金額を入力してください。例：5000円</p>
-										</dd>
-										<dt>一言</dt>
-										<dd>
-											<input type="text">
-											<p class="error-message">一言を入力してください。例：インテリアにこだわった個性あふれる一台です。</p>
-										</dd>
-										<dt>説明文１</dt>
-										<dd>
-											<input type="text">
-											<p class="error-message">説明文１を入力してください。例：4月に新しく入荷した車で、内部も綺麗です。</p>
-										</dd>
-										<dt>説明文2</dt>
-										<dd>
-											<input type="text">
-											<p class="error-message">説明文2を入力してください。例：爽やかなメタリックブルーのお車です。</p>
-										</dd>
-										<dt>説明文3</dt>
-										<dd>
-											<input type="text">
-											<p class="error-message">説明文3を入力してください。例：こちらは左ハンドルのお車になります。</p>
-										</dd>
-                                        <dt>登録写真</dt>
-                                        <dd>
-                                        <form action="">
-                                          <input type="file" name="">
-                                          <input type="file" name="">
-                                          <input type="file" name="">
-                                          <input type="file" name="">
-                                          <input type="file" name="">
-                                        </form>
-                                        </dd>
-									</dl>
-								</div>
-								<input type="submit" value="登録" class="btn btn-success">
-							</form>
+                                   </select>
+                                    <input type="submit" value="検索" class="btn btn-primary">
+						</form>
+						<div class="btn-group pull-right">
+							<ul>
+								<li class=" display-block-inline"><p
+										class="btn btn-warning margin-right-10">CSV出力</p></li>
+                                        <li class=" display-block-inline margin-right-10"><select
+                                    class="btn btn-primary">
+                                        <option>並び順を選択</option>
+                                        <option>登録日順</option>
+                                        <option>id順</option>
+                                        <option>乗車定員数順</option>
+                                </select></li>
+								<li class=" display-block-inline"><select
+									class="btn btn-default">
+										<option>表示件数を選択</option>
+										<option>10</option>
+										<option>20</option>
+										<option>30</option>
+										<option>50</option>
+										<option>100</option>
+								</select></li>
+							</ul>
+
 						</div>
 					</div>
+
 				</div>
+
+				<!-- Widget -->
+				<div class="widget widget-body-white widget-heading-simple">
+					<div class="widget-body">
+						<!-- Table -->
+						<table class="dynamicTable tableTools table checkboxs">
+
+							<!-- Table heading -->
+							<thead>
+								<tr>
+									<th width="70">番号</th>
+									<th width="200">車種</th>
+									<th width="200">登録ステーション</th>
+									<th width="100">クラス</th>
+									<th width="100">メーカー</th>
+									<th width="70">定員</th>
+									<th width="70">登録日</th>
+                                    
+								</tr>
+							</thead>
+							<!-- // Table heading END -->
+
+							<!-- Table body -->
+							<tbody>
+
+								<!-- Table row -->
+								<tr class="gradeX">
+									<td>1</td>
+									<td><a href="A6_car_detail.html">N-BOX</a></td>
+									<td><a href="A5_car_list.html">所沢店</a></td>
+									<td><a href="A5_car_list.html">軽自動車</a></td>
+									<td><a href="A5_car_list.html">ホンダ</a></td>
+									<td>4</td>
+                                    <td>2016年5月30日</td>
+									<td class="center"><a href="A6_car_detail.html"
+										class="btn btn-success">詳細
+									</a>
+                                    </td>
+								</tr>
+								<!-- // Table row END -->
+								<!-- Table row -->
+								<tr class="gradeX">
+									<td>1</td>
+									<td><a href="A6_car_detail.html">N-BOX</a></td>
+									<td><a href="A5_car_list.html">所沢店</a></td>
+									<td><a href="A5_car_list.html">軽自動車</a></td>
+									<td><a href="A5_car_list.html">ホンダ</a></td>
+									<td>4</td>
+                                    <td>2016年5月30日</td>
+									<td class="center"><a href="A6_car_detail.html"
+										class="btn btn-success">詳細
+									</a>
+                                    </td>
+								</tr>
+								<!-- // Table row END -->
+
+							</tbody>
+							<!-- // Table body END -->
+
+						</table>
+						<!-- // Table END -->
+
+					</div>
+				</div>
+				<!-- // Widget END -->
+                        <ul class="list-unstyled display-block-inline">
+                          <li><a href="">&laquo; 前</a></li>
+                          <li><a href="">1</a></li>
+                          <li><a href="">2</a></li>
+                          <li><a href="">3</a></li>
+                          <li><a href="">4</a></li>
+                          <li><a href="">5</a></li>
+                          <li><a href="">次へ &raquo;</a></li>
+                        </ul>
 			</div>
 
 
@@ -484,7 +426,6 @@
 		src="../assets/plugins/forms_elements_bootstrap-datepicker/js/bootstrap-datepicker.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
 	<script
 		src="../assets/components/forms_elements_bootstrap-datepicker/bootstrap-datepicker.init.js?v=v1.0.0-rc1&amp;sv=v0.0.1.2"></script>
-
 	<script src="../assets/components/core/core.init.js?v=v1.0.0-rc1"></script>
 </body>
 </html>

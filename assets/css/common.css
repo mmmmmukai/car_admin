@@ -2237,9 +2237,9 @@ i {
   -webkit-box-shadow: 0 1px 0 0 #0075c2;
 }
 .widget.widget-success {
-  box-shadow: 0 3px 0 0 #4c9628;
-  -moz-box-shadow: 0 3px 0 0 #4c9628;
-  -webkit-box-shadow: 0 3px 0 0 #4c9628;
+  box-shadow: 0 3px 0 0 #67b5b7;
+  -moz-box-shadow: 0 3px 0 0 #67b5b7;
+  -webkit-box-shadow: 0 3px 0 0 #67b5b7;
 }
 .widget.widget-success .background-icon {
   color: #4c9628;
@@ -2276,9 +2276,9 @@ i {
   -webkit-box-shadow: 0 1px 0 0 #c52c2c;
 }
 .widget.widget-warning {
-  box-shadow: 0 3px 0 0 #c58a2c;
-  -moz-box-shadow: 0 3px 0 0 #c58a2c;
-  -webkit-box-shadow: 0 3px 0 0 #c58a2c;
+  box-shadow: 0 3px 0 0 #e9bc00;
+  -moz-box-shadow: 0 3px 0 0 #e9bc00;
+  -webkit-box-shadow: 0 3px 0 0 #e9bc00;
 }
 .widget.widget-warning .background-icon {
   color: #c58a2c;
@@ -6322,8 +6322,8 @@ div.DTCR_pointer {
 .btn-success:focus,
 .btn-success:active,
 .btn-success.active {
-  background: #428223;
-  border-color: #428223;
+  background: #57989a;
+  border-color: #57989a;
 }
 .btn-success.btn-stroke:hover,
 .btn-success.btn-stroke:focus,
@@ -6334,6 +6334,39 @@ div.DTCR_pointer {
   border-color: #68a4d9;
 }
 .btn-success .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
+}
+.btn-select {
+  background: #fff;
+  border: 2px solid #e1e0df;
+  color: #000;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+.btn-select.btn-stroke {
+  background: none;
+  color: #67b5b7;
+}
+.btn-group.open .btn-select.dropdown-toggle,
+.btn-select.disabled,
+.btn-select[disabled],
+.btn-select:hover,
+.btn-select:focus,
+.btn-select:active,
+.btn-select.active {
+  background: #e1e0de;
+  border-color: #e1e0de;
+}
+.btn-select.btn-stroke:hover,
+.btn-select.btn-stroke:focus,
+.btn-select.btn-stroke:active,
+.btn-select.btn-stroke.active {
+  background: #e1e0de;
+  color: #fff;
+  border-color: #e1e0de;
+}
+.btn-select .caret {
   border-top-color: #fff;
   border-bottom-color: #fff;
 }
@@ -6391,6 +6424,23 @@ div.DTCR_pointer {
   padding-right: 0;
   width: 34px;
 }
+
+
+/* page-nav */
+.page-nav {
+  text-align: center;
+  border: 1px solid #dcdcdc;  
+}
+.page-nav li {
+  vertical-align: middle;
+  border: 1px solid #dcdcdc;      
+  padding: 10px 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+/* page-nav End*/
+
+
 .glyphicons.standard,
 .glyphicons-social.standard {
   width: 24px;
@@ -9939,7 +9989,7 @@ ul.social-comments li .user-info abbr {
 #menu > div > ul > li > ul li.active > a {
   color: #fff;
   padding: 0 0 0 8px -3px;
-  background: #c72a25;
+  background: #68a4d9;
 }
 #menu > div > ul > li > ul li.active > a > i:before {
   color: #fff;

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="paceSimple sidebar sidebar-fusion">
 <head>
-<title>管理者画面｜テキスト編集</title>
+<title>管理者画面｜テキスト新規作成</title>
 
 <!-- Meta -->
 <meta charset="utf-8">
@@ -129,6 +129,12 @@
                         </a>
                         <ul class="collapse" id="menu-text">
                             <li class="">
+                                <a href="A27_text_new.html" class="no-ajaxify">
+                                    <i class="fa fa-pencil"></i>
+                                    <span>新規作成</span>
+                                </a>
+                            </li>
+                            <li class="">
                                 <a href="A15_text_list.html" class="no-ajaxify">
                                     <i class="fa fa-reorder"></i>
                                     <span>一覧</span>
@@ -145,7 +151,7 @@
                         <ul class="collapse" id="menu-question">
                             <li class="">
                                 <a href="A17_faq_new.html" class="no-ajaxify">
-                                    <i class="fa fa-reorder"></i>
+                                    <i class="fa fa-pencil"></i>
                                     <span>新規作成</span>
                                 </a>
                             </li>
@@ -209,41 +215,59 @@
 
 				<div class="innerTB">
 					<div class="margin-bottom-10">
-						<h2 class="display-block-inline">テキスト内容編集</h2>
+						<h2 class="display-block-inline">テキスト新規作成</h2>
 					</div>
+                    <ul class="list-unstyled display-block-inline">
+                      <li class=" display-block-inline"><a href="A3_index.html">トップ</a> &gt;</li>
+                      <li class=" display-block-inline"><a href="A27_text_new.html">テキスト新規作成</a></li>
+                    </ul>
 					<div class="row">
 						<div class="col-md-0">
 							<form>
 								<div
 									class="widget icon-widget widget-primary innerAll text-weight-regular">
 									<dl class="display-block-inline margin-bottom-none">
-                                        <dt>変更日</dt>
+                                        <dt>登録日</dt>
                                         <dd>
 											<input type="datetime-local" name="" style="width:200px;">
-											<p class="error-message">変更日を入力してください。例：2016年5月30日</p>
+											<p class="error-message">登録日を入力してください。例：2016年5月30日</p>
                                         </dd>
-										<dt>カテゴリー</dt>
+										<dt>ページ位置</dt>
 										<dd>
                                             <form action="">
-                                              <select name="">
-                                                <option value="" selected>選択して下さい。</option>
-                                                <option value="">利用方法</option>
-                                                <option value="">マナー</option>
-                                                <option value="">料金</option>
-                                                <option value="">車両</option>
-                                                <option value="">車内設備</option>
-                                                <option value="">メーカー</option>
-                                                <option value="">貸し出し時間</option>
-                                                <option value="">もしもの時</option>
-                                                <option value="">その他</option>
-                                              </select>
-                                            </form>
-										<dt>テキスト</dt>
+                                <select  class="btn btn-select" name="">
+                                <option value="">ページを選択</option>
+                                        <option value="">トップ</option>
+                                        <option value="">-上</option>
+                                        <option value="">-中</option>
+                                        <option value="">-下</option>
+                                        <option value="">カーステーション一覧</option>
+                                        <option value="">よくある質問</option>
+                                        <option value="">よくある質問詳細</option>
+                                        <option value="">料金一覧</option>
+                                        <option value="">車種一覧</option>
+                                        <option value="">車種詳細</option>
+                                        <option value="">カーステーション一覧</option>
+                                    </select>
+                                 </form>
+										<dt>カテゴリーを選択</dt>
+										<dd>
+                                 <form action="">
+                                <select  class="btn btn-select" name="">
+                                    <option value="">カテゴリを選択</option>
+                                        <option value="">カーステーションについて</option>
+                                        <option value="">よくある質問について</option>
+                                        <option value="">料金について</option>
+                                        <option value="">車種について</option>
+                                    </select>
+                                    
+						</form>
+										<dt>テキスト内容</dt>
 										<dd>
                                             <form action="">
 										    	<textarea name="" width="500px"rows="8" cols=""></textarea>
                                             </form>
-											<p class="error-message">テキストの変更内容を入力してください。</p>
+											<p class="error-message">質問内容を入力してください。例：料金スステムが新しくなりました。</p>
 										</dd>
 									</dl>
 								</div>
